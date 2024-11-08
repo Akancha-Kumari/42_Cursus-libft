@@ -6,7 +6,7 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 12:06:24 by akumari           #+#    #+#             */
-/*   Updated: 2024/11/08 13:38:02 by akumari          ###   ########.fr       */
+/*   Updated: 2024/11/08 14:24:27 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@
 */
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
-	char	*new_str;
-	int		s_len;
-	size_t	substr_len;
-	size_t	i;
+	char			*new_str;
+	unsigned int	s_len;
+	size_t			substr_len;
+	size_t			i;
 
 	if (!s)
 		return (NULL);

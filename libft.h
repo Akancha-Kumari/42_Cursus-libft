@@ -6,7 +6,7 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 12:47:31 by akumari           #+#    #+#             */
-/*   Updated: 2024/11/07 12:47:33 by akumari          ###   ########.fr       */
+/*   Updated: 2024/11/08 13:20:17 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int		ft_isdigit(int d);
 int		ft_isprint(int prntval);
 int		ft_atoi(const char *str);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
-int		ft_strlen(const char *str);
+size_t	ft_strlen(const char *str);
 int		ft_strncmp(const char *s1, const char *s2, size_t size);
 int		ft_tolower(int ch);
 int		ft_toupper(int val);

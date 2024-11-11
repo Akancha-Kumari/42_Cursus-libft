@@ -6,11 +6,41 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 10:56:40 by akumari           #+#    #+#             */
-/*   Updated: 2024/11/08 10:57:47 by akumari          ###   ########.fr       */
+/*   Updated: 2024/11/11 15:14:32 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
+{
+	size_t	src_len;
+	size_t	dst_len;
+	size_t	i;
+	size_t	j;
+
+	if (size == 0)
+		return (ft_strlen(src));
+	src_len = ft_strlen(src);
+	dst_len = ft_strlen(dst);
+	if (size <= dst_len)
+		return (size + src_len);
+	i = dst_len;
+	j = 0;
+	while (i < (size - 1) && src[j])
+		dst[i++] = src[j++];
+	dst[i] = '\0';
+	return (src_len + dst_len);
+}
+
+// int	main(void)
+// {
+// 	char src[] = "akancha";
+// 	char dest[] = "kumari";
+// 	ft_strlcat(dest, src, 8);
+// 	puts(dest);
+// 	return (0);
+// }
 
 /* The strlcat() function concatenate strings with the same input parameters and
 outuput result as	snprintf(3). It is designed to be safer, more consistent,
@@ -30,33 +60,3 @@ RETURN VALUES
 	Like snprintf(3), strlcat() function return the total length of the string
 	it tried to create. That means the initial length of dst plus the length of src.
 	If the return value is >= dstsize, the output string has been truncated.*/
-
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
-{
-	size_t	src_len;
-	size_t	dst_len;
-	size_t	i;
-	size_t	j;
-
-	if (dst == NULL || src == NULL)
-		return (0);
-	src_len = strlen(src);
-	dst_len = strlen(dst);
-	if (size <= dst_len)
-		return (size + src_len);
-	i = dst_len;
-	j = 0;
-	while (i < (size - 1) && src[j])
-		dst[i++] = src[j++];
-	dst[i] = '\0';
-	return (src_len + dst_len);
-}
-
-// int	main(void)
-// {
-// 	char src[] = "akancha";
-// 	char dest[] = "kumari";
-// 	ft_strlcat(dest, src, 8);
-// 	puts(dest);
-// 	return (0);
-// }

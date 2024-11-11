@@ -6,7 +6,7 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 10:56:05 by akumari           #+#    #+#             */
-/*   Updated: 2024/11/08 10:57:56 by akumari          ###   ########.fr       */
+/*   Updated: 2024/11/11 13:30:58 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,11 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned const char	*s;
 	unsigned char		*d;
 
+	if (dest == NULL && src == NULL)
+		return (NULL);
 	s = src;
 	d = dest;
-	if (d == NULL || s == NULL)
+	if (d == s || n == 0)
 		return (dest);
 	while (n > 0)
 	{
@@ -32,11 +34,15 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-// int main(void)
+// int	main(void)
 // {
 // 	char src[] = "hhhhh";
 // 	char dest[] = "textme";
 // 	char *res;
-// 	res = ft_memcpy(dest, src, 2);
-// 	printf("%s\n", res);
-//  }
+// 	res = ft_memcpy("            ", ((void *)0), 17);
+// 	if (res)
+// 		printf("%s\n", res);
+// 	else
+// 		printf("nothing");
+// 	return (0);
+// }

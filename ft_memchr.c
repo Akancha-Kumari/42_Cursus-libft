@@ -6,7 +6,7 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 10:55:52 by akumari           #+#    #+#             */
-/*   Updated: 2024/11/08 10:57:59 by akumari          ###   ########.fr       */
+/*   Updated: 2024/11/11 12:25:29 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if (str[i] == c)
+		if (str[i] == (unsigned char)c)
 			return ((void *)&str[i]);
 		i++;
 	}
@@ -34,8 +34,10 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 // int main(void)
 // {
-// 	char *str = "akancha";
-// 	char *res = ft_memchr(str, 'n', 7);
-// 	printf("%s\n", res);
+// 	//char *str = "akancha";
+// 	//char *res = ft_memchr(str, 'n', 7);
+// 	//printf("%s\n", res);
+// 	int tab[7] = {-49, 49, 1, -1, 0, -2, 2};
+// 	printf("%p", (char *)ft_memchr(tab, -1, 7));
 // 	return (0);
 // }

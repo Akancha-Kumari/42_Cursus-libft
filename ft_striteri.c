@@ -6,13 +6,13 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 14:14:57 by akumari           #+#    #+#             */
-/*   Updated: 2024/11/11 10:10:49 by akumari          ###   ########.fr       */
+/*   Updated: 2024/11/11 12:59:52 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	striteri(char *s, void (*f)(unsigned int, char *))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int	i;
 
@@ -26,17 +26,17 @@ void	striteri(char *s, void (*f)(unsigned int, char *))
 	}
 }
 
-void	ft_toupper_test(unsigned int index, char *c)
+void	ft_upper_test(unsigned int index, char *c)
 {
+	(void)index;
 	if (c == NULL)
 		return ;
 	*c = (char)ft_toupper((int)*c);
-	printf("Index: %u, Character: %c\n", index, *c);
 }
 
 // int	main(void) {
 // 	char str[] = "hello";
-// 	striteri(str, ft_toupper_test);
+// 	ft_striteri(str, ft_upper_test);
 // 	printf("Modified string: %s\n", str);
 // 	return (0);
 // }

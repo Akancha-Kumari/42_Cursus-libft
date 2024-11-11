@@ -6,78 +6,85 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 14:01:09 by akumari           #+#    #+#             */
-/*   Updated: 2024/11/06 14:41:52 by akumari          ###   ########.fr       */
+/*   Updated: 2024/11/11 09:57:53 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	int_len(int nbr)
+int	int_len(int n)
 {
 	int	count;
 
 	count = 0;
-	if (nbr < 0)
-	{
-		nbr = -nbr;
+	if (n <= 0)
 		count++;
-	}
-	if (nbr == 0)
-		count++;
-	while (nbr != 0)
+	while (n != 0)
 	{
-		nbr /= 10;
+		n = n / 10;
 		count++;
 	}
 	return (count);
 }
 
-static char	*pre_conv(int len)
+char	*int_to_str(int n, char *new_str, int i, int nbr)
 {
-	char	*tmp;
-
-	tmp = (char *)malloc((len + 1));
-	if (!tmp)
-		return (NULL);
-	tmp[0] = '0';
-	return (tmp);
+	if (n == -2147483648)
+	{
+		ft_strlcpy(new_str, "-2147483648", 11);
+		return (new_str);
+	}
+	if (nbr < 0)
+	{
+		nbr = -n;
+		new_str[0] = '-';
+	}
+	while (nbr != 0)
+	{
+		new_str[i] = nbr % 10 + '0';
+		nbr = nbr / 10;
+		i--;
+	}
+	return (new_str);
 }
 
 char	*ft_itoa(int n)
 {
-	int		len;
-	int		i;
-	char	*result;
-	int		nbr;
+	char		*new_str;
+	int			i;
+	long int	nbr;
+	int			len;
 
-	nbr = n;
-	len = int_len(nbr);
-	result = pre_conv(len);
-	if (!result)
-		return (NULL);
-	if (nbr < 0)
-		nbr = -nbr;
-	i = len - 1;
-	while (nbr != 0)
+	if (n == 0)
 	{
-		result[i] = ((nbr % 10) + '0');
-		nbr = nbr / 10;
-		i--;
+		new_str = (char *)malloc(2);
+		if (!new_str)
+			return (NULL);
+		new_str[0] = '0';
+		new_str[1] = '\0';
+		return (new_str);
 	}
-	if (n < 0)
-		result[0] = '-';
-	result[len] = 0;
-	return (result);
+	i = 0;
+	nbr = n;
+	len = int_len(n);
+	new_str = (char *)malloc(len + 1);
+	if (!new_str)
+		return (NULL);
+	i = len - 1;
+	new_str[len] = '\0';
+	new_str = int_to_str(n, new_str, i, nbr);
+	return (new_str);
 }
-
 /*
-int	main(void) {
-	int num = -12345;
-	char *str = ft_itoa(num);
-	if (str) {
-		printf("String representation: %s\n", str);
-		free(str);
-	}
+int	main(void)
+{
+	long int value = +2147457546845684568;
+	char *res = ft_itoa(value);
+	if (res)
+		printf("%s\n", res);
+	else
+		printf("not converted");
+	free(res);
 	return (0);
 }
 */

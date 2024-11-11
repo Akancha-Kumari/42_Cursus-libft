@@ -6,7 +6,7 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 14:10:51 by akumari           #+#    #+#             */
-/*   Updated: 2024/11/06 14:41:19 by akumari          ###   ########.fr       */
+/*   Updated: 2024/11/11 10:17:26 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*new_str;
 	unsigned int	i;
 
-	if (!s)
+	if (!s || !f)
 		return (NULL);
 	new_str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!new_str)
@@ -34,18 +34,18 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 char	ft_toupper_test(unsigned int i, char c)
 {
-	return (ft_toupper(c) + i);
+	(void)i;
+	return (ft_toupper(c));
 }
-/*
-int	main(void) {
-	char *original = "hello";
-	char *modified = ft_strmapi(original, ft_toupper_test);
 
-	if (modified) {
-		printf("Original: %s\n", original);
-		printf("Modified: %s\n", modified);
-		free(modified);
-	}
-	return (0);
-}
-*/
+// int	main(void) {
+// 	char *original = "hello";
+// 	char *modified = ft_strmapi(original, ft_toupper_test);
+
+// 	if (modified) {
+// 		printf("Original: %s\n", original);
+// 		printf("Modified: %s\n", modified);
+// 		free(modified);
+// 	}
+// 	return (0);
+// }

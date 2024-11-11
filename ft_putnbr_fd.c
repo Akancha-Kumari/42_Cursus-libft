@@ -6,7 +6,7 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 14:32:37 by akumari           #+#    #+#             */
-/*   Updated: 2024/11/06 14:39:57 by akumari          ###   ########.fr       */
+/*   Updated: 2024/11/11 10:15:57 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,24 +20,26 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	else if (n < 0)
 	{
-		ft_putchar_fd('-', 1);
+		ft_putchar_fd('-', fd);
 		n = -n;
-		ft_putnbr_fd(n, 1);
+		ft_putnbr_fd(n, fd);
 	}
 	else if (n > 9)
 	{
-		ft_putnbr_fd(n / 10, 1);
-		ft_putnbr_fd(n % 10, 1);
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
 	}
 	else
 	{
-		ft_putchar_fd(n + 48, 1);
+		ft_putchar_fd(n + 48, fd);
 	}
 }
-/*
+
 int	main(void)
 {
-	ft_putnbr_fd(-4545, 1);
+	long int	i;
+
+	i = -456347347545;
+	ft_putnbr_fd(i, 1);
 	return (0);
 }
-*/

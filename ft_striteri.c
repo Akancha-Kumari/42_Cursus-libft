@@ -6,7 +6,7 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 14:14:57 by akumari           #+#    #+#             */
-/*   Updated: 2024/11/06 14:40:53 by akumari          ###   ########.fr       */
+/*   Updated: 2024/11/11 10:10:49 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,10 @@ void	ft_toupper_test(unsigned int index, char *c)
 	*c = (char)ft_toupper((int)*c);
 	printf("Index: %u, Character: %c\n", index, *c);
 }
-/*
-int	main(void) {
-	char str[] = "hello, world!";
-	striteri(str, ft_toupper_test);
-	printf("Modified string: %s\n", str);
-	return (0);
-}
-*/
+
+// int	main(void) {
+// 	char str[] = "hello";
+// 	striteri(str, ft_toupper_test);
+// 	printf("Modified string: %s\n", str);
+// 	return (0);
+// }

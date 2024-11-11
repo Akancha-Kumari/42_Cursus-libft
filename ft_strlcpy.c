@@ -6,7 +6,7 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 10:56:46 by akumari           #+#    #+#             */
-/*   Updated: 2024/11/08 11:03:42 by akumari          ###   ########.fr       */
+/*   Updated: 2024/11/11 09:59:00 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	j = 0;
 	if (dst == NULL || src == NULL)
 		return (0);
-	i = strlen(src);
+	i = ft_strlen(src);
 	if (size == 0)
 		return (i);
 	while ((j < (size - 1)) && src[j])

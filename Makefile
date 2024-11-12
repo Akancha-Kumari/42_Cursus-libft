@@ -6,7 +6,7 @@
 #    By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/11 10:20:03 by akumari           #+#    #+#              #
-#    Updated: 2024/11/11 12:56:23 by akumari          ###   ########.fr        #
+#    Updated: 2024/11/12 14:24:47 by akumari          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,9 +19,14 @@ SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strle
 		ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c \
 		ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
+BONUS_SRCS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
+			 ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
+
 OBJS = $(SRCS:.c=.o)
 
-CC = gcc
+BONUS_OBJS = $(BONUS_SRCS:.c=.o)
+
+CC = cc
 
 CFLAGS = -Wall -Wextra -Werror
 
@@ -31,23 +36,26 @@ RM = rm -f
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) 
 	$(LIBC) $(NAME) $(OBJS)
 	ranlib $(NAME)
+
+bonus: ${NAME} ${BONUS_OBJS}
+	${LIBC} ${NAME} ${BONUS_OBJS}
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
-	gcc -nostartfiles -shared -o libft.so $(OBJS)
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS) $(BONUS_SRCS)
+	gcc -nostartfiles -shared -o libft.so $(OBJS) $(BONUS_SRCS)
 
 clean: 
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) $(BONUS_OBJS)
 
 fclean: clean 
-	$(RM) $(NAME)
+	$(RM) $(NAME) $(bonus)
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all bonus clean fclean re

@@ -1,42 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 14:14:57 by akumari           #+#    #+#             */
-/*   Updated: 2024/11/13 12:03:21 by akumari          ###   ########.fr       */
+/*   Created: 2024/11/12 10:10:41 by akumari           #+#    #+#             */
+/*   Updated: 2024/11/12 11:11:12 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	unsigned int	i;
-
-	if (s == NULL || f == NULL)
+	if (!lst || !new)
 		return ;
-	i = 0;
-	while (s[i] != '\0')
-	{
-		f(i, &s[i]);
-		i++;
-	}
+	new->next = *lst;
+	*lst = new;
 }
 
-void	ft_upper_test(unsigned int index, char *c)
-{
-	(void)index;
-	if (c == NULL)
-		return ;
-	*c = (char)ft_toupper((int)*c);
-}
+// int main(void)
+// {
+// 	t_list *frontnode = NULL;
+//     t_list *new_node = ft_lstnew("Hello");
+//     ft_lstadd_front(&frontnode, new_node);
 
-// int	main(void) {
-// 	char str[] = "hello";
-// 	ft_striteri(str, ft_upper_test);
-// 	printf("Modified string: %s\n", str);
-// 	return (0);
+//     if (frontnode && frontnode->content) {
+//         printf("%s\n", (char *)frontnode->content);
+//     }
+//     free(new_node);
+//     return (0);
 // }

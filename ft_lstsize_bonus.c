@@ -1,42 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 14:14:57 by akumari           #+#    #+#             */
-/*   Updated: 2024/11/13 12:03:21 by akumari          ###   ########.fr       */
+/*   Created: 2024/11/12 11:08:15 by akumari           #+#    #+#             */
+/*   Updated: 2024/11/12 11:42:48 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+int	ft_lstsize(t_list *lst)
 {
-	unsigned int	i;
+	int		count;
+	t_list	*curr;
 
-	if (s == NULL || f == NULL)
-		return ;
-	i = 0;
-	while (s[i] != '\0')
+	count = 0;
+	if (!lst)
+		return (count);
+	curr = lst;
+	while (curr != NULL)
 	{
-		f(i, &s[i]);
-		i++;
+		count++;
+		curr = curr->next;
 	}
+	return (count);
 }
 
-void	ft_upper_test(unsigned int index, char *c)
-{
-	(void)index;
-	if (c == NULL)
-		return ;
-	*c = (char)ft_toupper((int)*c);
-}
-
-// int	main(void) {
-// 	char str[] = "hello";
-// 	ft_striteri(str, ft_upper_test);
-// 	printf("Modified string: %s\n", str);
+// int	main(void)
+// {
+// 	t_list *new_node = ft_lstnew("Hello");
+// 	new_node->next = ft_lstnew("Akancha");
+// 	printf("Count of nodes is %d", ft_lstsize(new_node));
 // 	return (0);
 // }

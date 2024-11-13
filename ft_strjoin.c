@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	*error_check(char const *s1, char const *s2)
+static char	*error_check(char const *s1, char const *s2)
 {
 	if (!s1 && !s2)
 		return (ft_strdup(""));

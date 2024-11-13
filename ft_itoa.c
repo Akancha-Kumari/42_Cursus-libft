@@ -6,13 +6,13 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 14:01:09 by akumari           #+#    #+#             */
-/*   Updated: 2024/11/11 11:25:15 by akumari          ###   ########.fr       */
+/*   Updated: 2024/11/13 10:17:31 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	int_len(int n)
+static int	int_len(int n)
 {
 	int	count;
 
@@ -27,7 +27,7 @@ int	int_len(int n)
 	return (count);
 }
 
-char	*int_to_str(int n, char *new_str, int i, int nbr)
+static char	*int_to_str(int n, char *new_str, int i, int nbr)
 {
 	if (n == -2147483648)
 	{

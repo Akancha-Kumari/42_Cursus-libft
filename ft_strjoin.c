@@ -6,7 +6,7 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 13:25:07 by akumari           #+#    #+#             */
-/*   Updated: 2024/11/08 13:49:10 by akumari          ###   ########.fr       */
+/*   Updated: 2024/11/14 10:46:49 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,18 +50,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	new_str[i + j] = '\0';
 	return (new_str);
 }
-
-// int	main(void)
-// {
-// 	char *s1 = "";
-// 	char *s2 = "";
-// 	char *res;
-
-// 	res = ft_strjoin(s1, s2);
-// 	if (res)
-// 		printf("%s\n", res);
-// 	else
-// 		printf("nothing");
-// 	free(res);
-// 	return (0);
-// }

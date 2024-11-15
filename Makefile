@@ -6,7 +6,7 @@
 #    By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/11 10:20:03 by akumari           #+#    #+#              #
-#    Updated: 2024/11/13 11:42:15 by akumari          ###   ########.fr        #
+#    Updated: 2024/11/15 09:20:10 by akumari          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,10 @@ bonus: .bonus
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
-
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS) $(BONUS_SRCS)
+	gcc -nostartfiles -shared -o libft.so $(OBJS) $(BONUS_SRCS)
+	
 clean: 
 	$(RM) $(OBJS) $(BONUS_OBJS)
 	$(RM) .bonus

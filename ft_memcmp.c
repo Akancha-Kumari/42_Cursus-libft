@@ -6,7 +6,7 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 10:55:58 by akumari           #+#    #+#             */
-/*   Updated: 2024/11/08 10:57:57 by akumari          ###   ########.fr       */
+/*   Updated: 2024/11/14 13:00:31 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	unsigned const char	*str2;
 	size_t				i;
 
-	str1 = s1;
-	str2 = s2;
+	str1 = (unsigned const char *)s1;
+	str2 = (unsigned const char *)s2;
 	i = 0;
 	while ((str1 || str2) && (i < n))
 	{
@@ -29,13 +29,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
-// int main(void)
-// {
-// 	char *str = "akancha";
-// 	char *str2 = "akancha";
-
-// 	int res = ft_memcmp(str, str2, 7);
-// 	printf("%d\n", res);
-// 	return (0);
-// }

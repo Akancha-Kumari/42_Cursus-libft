@@ -6,7 +6,7 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 14:31:53 by akumari           #+#    #+#             */
-/*   Updated: 2024/11/06 14:40:02 by akumari          ###   ########.fr       */
+/*   Updated: 2024/11/14 10:48:50 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,3 @@ void	ft_putendl_fd(char *s, int fd)
 	}
 	write(fd, "\n", 1);
 }
-/*
-int	main(void)
-{
-	ft_putendl_fd("akancha", 1);
-	return (0);
-}
-*/

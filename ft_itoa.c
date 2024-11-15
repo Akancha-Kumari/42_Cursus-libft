@@ -6,7 +6,7 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 14:01:09 by akumari           #+#    #+#             */
-/*   Updated: 2024/11/13 10:17:31 by akumari          ###   ########.fr       */
+/*   Updated: 2024/11/15 09:16:11 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static int	int_len(int n)
 
 static char	*int_to_str(int n, char *new_str, int i, int nbr)
 {
-	if (n == -2147483648)
+	if (nbr == -2147483648)
 	{
 		ft_strlcpy(new_str, "-2147483648", 12);
 		return (new_str);
@@ -50,10 +50,10 @@ static char	*int_to_str(int n, char *new_str, int i, int nbr)
 
 char	*ft_itoa(int n)
 {
-	char		*new_str;
-	int			i;
-	long int	nbr;
-	int			len;
+	char	*new_str;
+	int		i;
+	int		nbr;
+	int		len;
 
 	if (n == 0)
 	{
@@ -75,18 +75,3 @@ char	*ft_itoa(int n)
 	new_str = int_to_str(n, new_str, i, nbr);
 	return (new_str);
 }
-
-// int	main(void)
-// {
-// 	long int	value;
-// 	char		*res;
-
-// 	value = -2147483648LL;
-// 	res = ft_itoa(value);
-// 	if (res)
-// 		printf("%s\n", res);
-// 	else
-// 		printf("not converted");
-// 	free(res);
-// 	return (0);
-// }

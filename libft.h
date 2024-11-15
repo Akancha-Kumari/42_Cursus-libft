@@ -6,7 +6,7 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 12:47:31 by akumari           #+#    #+#             */
-/*   Updated: 2024/11/12 14:32:20 by akumari          ###   ########.fr       */
+/*   Updated: 2024/11/15 09:18:53 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <limits.h>
 
 int					ft_atoi(const char *str);
 int					ft_isalnum(int c);

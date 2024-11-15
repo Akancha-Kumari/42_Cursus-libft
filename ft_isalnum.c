@@ -6,7 +6,7 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 10:55:23 by akumari           #+#    #+#             */
-/*   Updated: 2024/11/11 11:35:05 by akumari          ###   ########.fr       */
+/*   Updated: 2024/11/14 10:48:38 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,3 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
-// int main(void)
-// {
-// 	int val = ft_isalnum(123);
-// 	printf("%d\n", val);
-// 	return (0);
-// }

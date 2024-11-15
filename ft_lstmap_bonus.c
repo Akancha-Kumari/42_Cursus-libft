@@ -6,7 +6,7 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:29:43 by akumari           #+#    #+#             */
-/*   Updated: 2024/11/13 12:04:03 by akumari          ###   ########.fr       */
+/*   Updated: 2024/11/14 13:08:13 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,44 +34,3 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (new_list);
 }
-
-void	*to_convert_upper(void *content)
-{
-	char	*str;
-	int		i;
-
-	if (content == NULL)
-		return (NULL);
-	str = (char *)content;
-	i = 0;
-	while (str[i])
-	{
-		str[i] = (char)ft_toupper(str[i]);
-		i++;
-	}
-	return (str);
-}
-
-// int main(void)
-// {
-// 	t_list *head = ft_lstnew(ft_strdup("my"));
-//     head->next = ft_lstnew(ft_strdup("name"));
-//     head->next->next = ft_lstnew(ft_strdup("is"));
-//     head->next->next->next = ft_lstnew(ft_strdup("Akancha"));
-
-//     ft_lstmap(head, to_convert_upper, free);
-// 	t_list *temp = head;
-//     while (temp)
-//     {
-//         printf("%s\n", (char *)temp->content);
-//         temp = temp->next;
-//     }
-// 	temp = head;
-//     while (temp) {
-//         t_list *next_address = temp->next;
-//         free(temp->content);
-//         free(temp);
-//         temp = next_address;
-//     }
-//     return (0);
-// }

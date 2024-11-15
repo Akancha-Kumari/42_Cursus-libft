@@ -6,7 +6,7 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 10:56:21 by akumari           #+#    #+#             */
-/*   Updated: 2024/11/08 10:57:51 by akumari          ###   ########.fr       */
+/*   Updated: 2024/11/14 13:01:54 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	unsigned char	*str;
 
 	i = 0;
-	str = s;
+	str = (unsigned char *)s;
 	while (i < n)
 	{
 		*(str + i) = c;
@@ -26,13 +26,3 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (str);
 }
-/*
-int	main(void)
-{
-	char	str[] = "akancha";
-
-	ft_memset(str, 'y', 5);
-	puts(str);
-	return (0);
-}
-*/

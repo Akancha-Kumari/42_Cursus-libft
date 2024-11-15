@@ -6,15 +6,12 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 12:06:24 by akumari           #+#    #+#             */
-/*   Updated: 2024/11/08 14:24:27 by akumari          ###   ########.fr       */
+/*   Updated: 2024/11/14 10:46:13 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*Allocate (with malloc(3)) and return a new string from the string s.
-	This new string starts at index 'start' and has a maximum size of 'len'.
-*/
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
 	char			*new_str;
@@ -43,19 +40,3 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	new_str[i] = '\0';
 	return (new_str);
 }
-/*
-int	main(void)
-{
-	char	*str;
-	char	*result;
-
-	str = "akancha";
-	result = ft_substr(str, 4, 2);
-	if(result)
-		printf("%s\n", result);
-	else
-		printf("nothing");
-	free(result);
-	return (0);
-}
-*/

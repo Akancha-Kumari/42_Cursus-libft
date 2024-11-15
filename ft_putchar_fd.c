@@ -6,7 +6,7 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 14:27:56 by akumari           #+#    #+#             */
-/*   Updated: 2024/11/06 14:40:05 by akumari          ###   ########.fr       */
+/*   Updated: 2024/11/14 10:48:49 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,3 @@ void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
-/*
-int	main(void)
-{
-	ft_putchar_fd('a', 1);
-	printf("\n");
-	return (0);
-}
-*/

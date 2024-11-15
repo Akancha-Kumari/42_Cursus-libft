@@ -6,7 +6,7 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 14:10:51 by akumari           #+#    #+#             */
-/*   Updated: 2024/11/13 12:03:05 by akumari          ###   ########.fr       */
+/*   Updated: 2024/11/14 13:08:13 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,21 +31,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	new_str[i] = '\0';
 	return (new_str);
 }
-
-char	ft_toupper_test(unsigned int i, char c)
-{
-	(void)i;
-	return (ft_toupper(c));
-}
-
-// int	main(void) {
-// 	char *original = "hello";
-// 	char *modified = ft_strmapi(original, ft_toupper_test);
-
-// 	if (modified) {
-// 		printf("Original: %s\n", original);
-// 		printf("Modified: %s\n", modified);
-// 		free(modified);
-// 	}
-// 	return (0);
-// }

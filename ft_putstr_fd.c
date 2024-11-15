@@ -6,7 +6,7 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 14:29:52 by akumari           #+#    #+#             */
-/*   Updated: 2024/11/06 14:40:00 by akumari          ###   ########.fr       */
+/*   Updated: 2024/11/14 10:48:52 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,3 @@ void	ft_putstr_fd(char *s, int fd)
 		i++;
 	}
 }
-/*
-int	main(void)
-{
-	ft_putstr_fd("akancha", 1);
-	printf("\n");
-	return (0);
-}
-*/

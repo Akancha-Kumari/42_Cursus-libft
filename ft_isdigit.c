@@ -6,7 +6,7 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 10:55:39 by akumari           #+#    #+#             */
-/*   Updated: 2024/11/11 11:35:53 by akumari          ###   ########.fr       */
+/*   Updated: 2024/11/14 10:48:33 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,3 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
-// int main(void)
-// {
-// 	int val = ft_isdigit(-1);
-// 	printf("%d\n", val);
-// 	return (0);
-// }

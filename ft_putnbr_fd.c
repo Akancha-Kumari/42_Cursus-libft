@@ -6,7 +6,7 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 14:32:37 by akumari           #+#    #+#             */
-/*   Updated: 2024/11/11 10:58:18 by akumari          ###   ########.fr       */
+/*   Updated: 2024/11/14 10:48:51 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,3 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd(n + 48, fd);
 	}
 }
-
-// int	main(void)
-// {
-// 	long int	i;
-
-// 	i = -456347347545;
-// 	ft_putnbr_fd(i, 1);
-// 	return (0);
-// }

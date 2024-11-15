@@ -6,7 +6,7 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 14:34:46 by akumari           #+#    #+#             */
-/*   Updated: 2024/11/11 15:04:30 by akumari          ###   ########.fr       */
+/*   Updated: 2024/11/14 10:48:53 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,23 +113,3 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (arr);
 }
-
-// int	main(void)
-// {
-// 	char	s[50] = "myname";
-// 	char	del;
-// 	char	**res;
-
-// 	del = 'n';
-// 	res = ft_split(s, del);
-// 	if (res)
-// 	{
-// 		for (int i = 0; res[i] != NULL; i++)
-// 		{
-// 			printf("%s\n", res[i]);
-// 			free(res[i]);
-// 		}
-// 		free(res);
-// 	}
-// 	return (0);
-// }

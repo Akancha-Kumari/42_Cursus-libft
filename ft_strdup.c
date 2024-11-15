@@ -6,7 +6,7 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 10:56:34 by akumari           #+#    #+#             */
-/*   Updated: 2024/11/08 10:57:49 by akumari          ###   ########.fr       */
+/*   Updated: 2024/11/14 10:48:55 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,3 @@ char	*ft_strdup(const char *src)
 	cpy_str[i] = '\0';
 	return (cpy_str);
 }
-
-// int	main(void)
-// {
-// 	const char	*str = "Akancha";
-// 	char		*result;
-
-// 	result = ft_strdup(str);
-// 	printf("%s\n", result);
-// 	free(result);
-// 	return (0);
-// }

@@ -6,7 +6,7 @@
 /*   By: akumari <akumari@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 10:55:48 by akumari           #+#    #+#             */
-/*   Updated: 2024/11/08 10:58:00 by akumari          ###   ########.fr       */
+/*   Updated: 2024/11/14 10:48:32 by akumari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,3 @@ int	ft_isprint(int c)
 		return (1);
 	return (0);
 }
-// int main(void)
-// {
-// 	int val = ft_isprint('$');
-// 	printf("%d\n", val);
-// 	return (0);
-// }

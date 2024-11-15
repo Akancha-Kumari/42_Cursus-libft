@@ -49,9 +49,6 @@ bonus: .bonus
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS) $(BONUS_SRCS)
-	gcc -nostartfiles -shared -o libft.so $(OBJS) $(BONUS_SRCS)
 	
 clean: 
 	$(RM) $(OBJS) $(BONUS_OBJS)
